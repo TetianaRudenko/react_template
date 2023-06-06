@@ -15,7 +15,8 @@ import { Card, EventName, Info, Chip } from "./Event.styled";
 
 export const Event = ({name,location, speaker, type, start, end }) => {
   const formatedStartTime = formatEventStart(start)
-  const formatedTimeDuration = formatEventDuration(start,end )
+  const formatedTimeDuration = formatEventDuration(start, end)
+  
   return (
     <Card>
       <EventName>{name}</EventName>

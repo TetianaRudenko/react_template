@@ -1,17 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "../src/components/App";
+import App from "./components/App/App";
 import './index.css';
-//import ReactDOM from "react-dom";
-//import paintings from "../src/paintings.json";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../src/components/constants/theme";
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+    
+  </React.StrictMode>
+);
+  
+
+
+//    import React from "react";
+//    import ReactDOM from "react-dom/client";
+//    import App from "../src/components/App";
+//    import './index.css';
+//    //import ReactDOM from "react-dom";
+//    //import paintings from "../src/paintings.json";
 
 
 //всередині index.js ми рендеримо тільки APP, а в середині App - все решту
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
+//  ReactDOM.createRoot(document.getElementById('root')).render(
+//    <React.StrictMode>
+//      <App />
+//    </React.StrictMode>
+//  );
 
 
 
